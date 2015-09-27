@@ -18,10 +18,9 @@ public class Insertion1 {
                     
     }    
     private static void insertionSortPart2(int[] ar) {
-        for(int i=1; i<ar.length; i++){ //start from the second element 
+        for(int i=1; i<ar.length; i++){ //start from the second element (i=1)
                                         //assume first element is already sorted
             int correctIndex = findCorrectIndexOfElement(ar, i);
-//            System.out.println("element:"+ar[i]+ " index:"+correctIndex);
             if( correctIndex != i){ //do nothing if i==correctIndex, element in the right place
                 //else
                 //move elements from correctIndex to index (i) one step right
@@ -34,7 +33,7 @@ public class Insertion1 {
             printArray(ar);
         }
     }
-    private static int findCorrectIndexOfElement(int[] ar, int index) {
+    private static int findCorrectIndexOfElement(int[] ar, int index) { //find the correct position of the item at ar[index]
         int correctIndex = 0;
         int i = 0;
         for(i=0; i<index; i++){
@@ -46,7 +45,7 @@ public class Insertion1 {
                 break;
             }
         }
-        if(i==index){return index;}
+        if(i==index){return index;} //loop finished running, therefore all the values left are smaller, return index
         else return correctIndex;
     }
     private static void printArray(int[] ar) {
