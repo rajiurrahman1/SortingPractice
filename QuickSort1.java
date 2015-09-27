@@ -3,6 +3,7 @@ package SortingPractice;
 import java.util.Scanner;
 
 /**
+ *	Quick sort with utilizing extra memory 
  *
  * @author Rajiur
  */
