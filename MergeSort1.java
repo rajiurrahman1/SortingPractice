@@ -7,17 +7,18 @@ import java.util.Scanner;
  * @author Rajiur
  */
 public class MergeSort1 {
-    public static void main(String[] args){
+    
+	public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         int s = in.nextInt();
         int[] ar = new int[s];
         for(int i=0;i<s;i++){
             ar[i]=in.nextInt(); 
         }
-        printArray(ar);
         mergeSort(ar, 0, ar.length-1);
         printArray(ar);
     }
+	
     private static void mergeSort(int[] ar, int startIndex, int endIndex) {
         if(startIndex < endIndex){
             int mid = startIndex+(endIndex-startIndex)/2;
@@ -27,6 +28,7 @@ public class MergeSort1 {
             merge(ar, startIndex, mid, endIndex);
         }
     }
+	
     private static void merge(int[] ar, int startIndex, int mid, int endIndex) {
         int i,j,k;
         int[] left = new int[mid - startIndex+1];
@@ -61,7 +63,8 @@ public class MergeSort1 {
         }
         
     }
-    private static void printArray(int[] ar) {
+    
+	private static void printArray(int[] ar) {
         for(int n: ar){
            System.out.print(n+" ");
         }
