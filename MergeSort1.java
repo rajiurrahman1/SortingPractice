@@ -17,8 +17,7 @@ public class MergeSort1 {
         }
         mergeSort(ar, 0, ar.length-1);
         printArray(ar);
-    }
-	
+    }	
     private static void mergeSort(int[] ar, int startIndex, int endIndex) {
         if(startIndex < endIndex){
             int mid = startIndex+(endIndex-startIndex)/2;
@@ -27,8 +26,7 @@ public class MergeSort1 {
             mergeSort(ar, mid+1, endIndex);
             merge(ar, startIndex, mid, endIndex);
         }
-    }
-	
+    }	
     private static void merge(int[] ar, int startIndex, int mid, int endIndex) {
         int i,j,k;
         int[] left = new int[mid - startIndex+1];
@@ -62,8 +60,7 @@ public class MergeSort1 {
             }
         }
         
-    }
-    
+    }    
 	private static void printArray(int[] ar) {
         for(int n: ar){
            System.out.print(n+" ");
